@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Skranji&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <img src="./pics/logo.svg" alt="logo" class="logo-icon" />
+        <p class="brand-name">GSAP-Project</p>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-line first"></div>
+        <div class="hamburger-line second"></div>
+      </div>
+      <ul class="nav-menu">
+        <li class="list-item active" id="home">Home</li>
+        <li class="list-item" id="about">About</li>
+        <li class="list-item" id="contact">Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <div class="section welcome">
+        <div class="welcome-text-content">
+          <h1 class="welcome-header">
+            <span>Hello</span>
+            <span>to</span>
+            <span>this</span>
+            <span>webpage</span>
+          </h1>
+          <p class="sub-welcome-header">
+            Relax your mind, find your inner balance
+          </p>
+        </div>
+        <div class="image" id="stars"></div>
+        <div class="image" id="horizon"></div>
+        <div class="image" id="cloud1"></div>
+        <div class="image" id="cloud2"></div>
+      </div>
+      <div class="section animals">
+        <div class="panel tree">
+          <div class="panel-description">
+            <h2 class="description-header tree-descr">
+              Tree is a symbol of deeply rooted wisdom!
+            </h2>
+            <!-- <p class="description-sub">
+            Tree is a symbol of deeply rooted wisdom!
+          </p> -->
+          </div>
+          <img class="panel-img tree-pic" src="./pics/tree.svg" alt="..." />
+        </div>
+        <div class="panel face">
+          <div class="panel-description">
+            <h2 class="description-header face-descr">
+              Face that looks pretty, but not as pretty as you my darling.
+            </h2>
+            <!-- <p class="description-sub">
+            Tree is a symbol of deeply rooted wisdom!
+          </p> -->
+          </div>
+          <img class="panel-img face-pic" src="./pics/face.svg" alt="..." />
+        </div>
+      </div>
+      <div class="container2 section">
+        <div class="text-content">
+          <h2 class="season-title">winter</h2>
+          <p class="season-descr">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nisi et
+            deserunt aspernatur perferendis mollitia illo debitis eveniet
+            quibusdam eos, repellat expedita accusantium odio neque omnis vitae
+            error pariatur tenetur.
+          </p>
+          <ul class="season-list">
+            <li class="list-item">Lorem ipsum dolor sit amet.</li>
+            <li class="list-item">Lorem, ipsum.</li>
+            <li class="list-item">Lorem ipsum dolor sit.</li>
+          </ul>
+          <button class="button">More...</button>
+        </div>
+        <div class="graphic-content">
+          <div class="squares-carousel">
+            <div class="square summer" id="1">
+              <img class="square-content" src="/pics/summer.jpg" />
+            </div>
+            <div class="square autumn" id="2">
+              <img class="square-content" src="/pics/autumn.jpg" />
+            </div>
+            <div class="square winter active" id="4">
+              <img class="square-content" src="/pics/winter.jpg" />
+            </div>
+            <div class="square spring" id="3">
+              <img class="square-content" src="/pics/spring.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container1 section">
+        <div class="spaceship"></div>
+        <div class="content">
+          <h2 class="title">Are you ready to start your journey?</h2>
+          <p class="subtitle">
+            Move from your chair and begin the most beautiful adventure of your
+            lifetime!
+          </p>
+          <button class="button button-start">Lets start!</button>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="last section">
+        <div class="contact">
+          <h2 class="last-header">Got any questions?</h2>
+          <p class="sub-last-header">Hit me up!</p>
+          <form action="submit" class="contact-form">
+            <div class="name">
+              <input type="text" class="input-text" id="name" required />
+
+              <label for="name" class="contact-label"
+                ><p class="label-text">Name</p></label
+              >
+            </div>
+
+            <div class="mail">
+              <input type="text" class="input-text" id="mail" required />
+
+              <label for="mail" class="contact-label"
+                ><p class="label-text">Mail</p></label
+              >
+            </div>
+
+            <div class="message">
+              <input type="text" class="input-text" id="message" required />
+
+              <label for="message" class="contact-label"
+                ><p class="label-text">Message</p></label
+              >
+            </div>
+
+            <button type="submit" class="button">Send</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="dev-info">
+        Developed by
+        <a href="https://github.com/Desiak" target="_blank" class="dev-link"
+          >Desiak</a
+        >
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
