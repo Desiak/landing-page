@@ -1,0 +1,68 @@
+.section-second {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spaceship {
+    flex-basis: 40%;
+    height: 40vw;
+
+    transform: rotateZ(30deg);
+
+    background-image: url("../pics/spaceship.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 60%;
+    height: 60%;
+    color: white;
+
+    .title {
+      font-size: 5vmax;
+      font-family: "Skranji", cursive;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.755);
+    }
+  }
+  @media (max-width: 1200px) {
+    width: 90%;
+    margin: 0 auto;
+    .content {
+      flex-basis: 50%;
+      justify-content: space-around;
+      text-align: center;
+
+      height: 100%;
+    }
+    .spaceship {
+      flex-basis: 40%;
+      height: 40vw;
+    }
+  }
+  @media (max-width: 700px) {
+    flex-wrap: wrap;
+    .spaceship {
+      flex-basis: 100%;
+      height: 60vh;
+      transform: translateY(-100%) rotateZ(30deg);
+      z-index: -1;
+      filter: brightness(0.3);
+    }
+    .content {
+      flex-basis: 100%;
+      order: -1;
+    }
+  }
+}

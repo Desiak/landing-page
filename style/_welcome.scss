@@ -1,0 +1,101 @@
+.welcome {
+  overflow: visible;
+  position: relative;
+  .reveal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transform: translateY(-50%);
+    background-color: rgb(18, 18, 18);
+  }
+  .background-image {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+  #stars {
+    z-index: 5;
+    width: 102%;
+    height: 102%;
+    background-image: url("../pics/stars.svg");
+    background-size: cover;
+    background-position: center;
+  }
+  #horizon {
+    background-image: url("../pics/horizon1.svg");
+    height: 100%;
+
+    width: 102%;
+    z-index: 6;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    bottom: -20%;
+    left: -1%;
+    @media (max-width: 1200px) {
+      background-position: bottom center;
+      background-size: cover;
+      height: 100%;
+    }
+  }
+  #cloud1 {
+    background-image: url("../pics/cloud1.svg");
+    width: 10vmax;
+    height: 10vmax;
+    top: 15%;
+    left: 50%;
+    z-index: 10;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+  }
+  #cloud2 {
+    background-image: url("../pics/cloud2.svg");
+    width: 15vmax;
+    height: 15vmax;
+    top: 25%;
+    left: 65%;
+    z-index: 10;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+  }
+  .welcome-text-content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 65%;
+    color: white;
+    z-index: 50;
+    font-size: 2vmax;
+    text-align: center;
+
+    .welcome-header {
+      font-size: 6vmax;
+      font-family: "Skranji", cursive;
+      opacity: 0;
+
+      span {
+        display: inline-block;
+        .animated-letter {
+          display: inline-block;
+          min-width: 20px;
+        }
+      }
+    }
+    .sub-welcome-header {
+      opacity: 0.8;
+    }
+    @media (max-width: 960px) {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

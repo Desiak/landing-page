@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 const squares = document.querySelectorAll(".square");
 const contactForm = document.querySelector(".contact-form");
 const navListItems = document.querySelectorAll(".nav-menu .list-item");
-const backgroundImages = document.querySelectorAll(".image");
+const backgroundImages = document.querySelectorAll(".background-image");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 let shouldDropdown = 1;
 let dropdownIsThrottled = false;
@@ -15,12 +15,12 @@ let posNumber = 0;
 
 const mainAppear = gsap.timeline({
   scrollTrigger: {
-    trigger: ".container1",
+    trigger: ".section-second",
     start: "+=120% top",
   },
 });
 ScrollTrigger.create({
-  trigger: ".last",
+  trigger: ".contact",
   start: "150% 200px",
   onEnter: () => {
     navScrollSpy("contact");
@@ -216,18 +216,16 @@ hamburgerMenu.addEventListener("click", () => {
   onClickDropdownMenu(shouldDropdown);
 });
 
-//animate animals parallax
+//parallax of intro section
 
-const animalsReveal = gsap.timeline({
+const introPanelsReveal = gsap.timeline({
   scrollTrigger: {
-    trigger: ".animals",
+    trigger: ".intro",
     start: "top top",
     end: "+=100% top",
-    // markers: true,
     pin: true,
     pinSpacing: false,
     scrub: true,
-    // markers: true,
     onEnter: () => {
       navScrollSpy("about");
     },
@@ -238,7 +236,7 @@ const animalsReveal = gsap.timeline({
   },
 });
 
-animalsReveal
+introPanelsReveal
   .fromTo(".tree", { opacity: 0 }, { opacity: 1 })
   .fromTo(".tree", { opacity: 1 }, { opacity: 1 })
   .fromTo(".tree", { opacity: 1 }, { opacity: 0 })
@@ -248,7 +246,7 @@ animalsReveal
 
 //Animated triangles background
 const createAnimatedTriangles = () => {
-  const parent = document.querySelector(".last");
+  const parent = document.querySelector(".contact");
   const randomTriangle = document.createElement("span");
   const positionBottom = Math.floor(Math.random() * 100);
   const positionLeft = Math.floor(Math.random() * 100);
@@ -336,7 +334,6 @@ const rotateCarousel = (rotationsNumber, clickedSquare) => {
           break;
       }
       seasonHeader.innerText = clickedSquare.classList[1];
-      console.log(clickedSquare.classList[1]);
       seasonHeader.style.setProperty("color", seasonHeaderColor);
       listItems.forEach((item) => {
         item.style.setProperty(
@@ -405,7 +402,7 @@ mainAppear
 const panelsReveal = gsap.timeline();
 
 panelsReveal.fromTo(
-  ".container2",
+  ".section-first",
   {
     opacity: 0,
     yPercent: -2,
@@ -415,7 +412,7 @@ panelsReveal.fromTo(
 
 ScrollTrigger.create({
   animation: panelsReveal,
-  trigger: ".container2",
+  trigger: ".section-first",
   start: "top top",
   end: "+=1200",
   pin: true,
