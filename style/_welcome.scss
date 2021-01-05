@@ -1,15 +1,15 @@
 .welcome {
   overflow: visible;
   position: relative;
-  .reveal {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    transform: translateY(-50%);
-    background-color: rgb(18, 18, 18);
-  }
+  // .reveal {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 10%;
+  //   transform: translateY(-50%);
+  //   background-color: rgb(18, 18, 18);
+  // }
   .background-image {
     position: absolute;
     object-fit: cover;
@@ -91,7 +91,7 @@
       }
     }
     .sub-welcome-header {
-      opacity: 0.8;
+      opacity: 0;
     }
     @media (max-width: 960px) {
       width: 100%;

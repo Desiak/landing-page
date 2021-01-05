@@ -202,17 +202,6 @@ body {
   position: relative;
 }
 
-.welcome .reveal {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #121212;
-}
-
 .welcome .background-image {
   position: absolute;
   -o-object-fit: cover;
@@ -306,7 +295,7 @@ body {
 }
 
 .welcome .welcome-text-content .sub-welcome-header {
-  opacity: 0.8;
+  opacity: 0;
 }
 
 @media (max-width: 960px) {
